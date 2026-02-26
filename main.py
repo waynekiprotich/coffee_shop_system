@@ -2,22 +2,22 @@ from auth import Auth
 from order import Order
 from storage import Storage
 from utils import log_action
-
+#menu
 coffee_menu = {
     "1": {"name": "Espresso", "price": 200},
     "2": {"name": "Latte", "price": 250},
     "3": {"name": "Cappuccino", "price": 300}
 }
-
+#size
 coffee_size = {
     "small": 1,
     "medium": 1.2,
     "large": 1.5
 }
-
+# loading orders from storage
 def load_orders():
     return Storage.load("orders.json")
-
+# save orders to storage
 def save_orders(order):
     
     orders = load_orders()
@@ -28,8 +28,8 @@ def save_orders(order):
     
     Storage.save("orders.json", orders)
     
-
-@log_action
+# Handles coffee ordering
+@log_action # decorator from utils
 def place_order(phone):
     print(f"coffee_menu")
     
@@ -61,7 +61,7 @@ def place_order(phone):
     
     save_orders(order)
     print("Order placed successfully")
-    
+# viewing orders as admin    
 def view_orders():
     orders =load_orders()
     if not orders:
@@ -77,7 +77,7 @@ def view_orders():
                 Price: KSH {order.get('price')}
                 -------------------
                 """)
-        
+# calculating the total revenue as admin       
 def view_total_revenue():
     orders = load_orders()
     
@@ -99,7 +99,7 @@ def customer_menu(phone):
 
         else:
             break
-
+# load admin menu
 def admin_menu():
     while True:
         print("\nAdmin Dashboard")
@@ -117,7 +117,7 @@ def admin_menu():
 
         else:
             break
-        
+#load main menu       
 def main_menu():
     while True:
 
