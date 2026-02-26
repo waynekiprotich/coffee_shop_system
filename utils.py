@@ -11,4 +11,3 @@ def validate_phone(phone):
 
 def vaidate(password):
     return len(password) >= 8
-    
