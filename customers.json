@@ -1,0 +1,22 @@
+{
+    "0712345678": {
+    "username": "admin",
+    "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "admin"
+},
+"0700112233": {
+    "username": "wayne",
+    "password": "ef92b778bafe771e89245b89ecbc7b0a4b5a6c8b5e5f9f0f8b0f1c9a0e8a4f1",
+    "role": "customer"
+},
+"0799887766": {
+    "username": "bynum",
+    "password": "ef92b778bafe771e89245b89ecbc7b0a4b5a6c8b5e5f9f0f8b0f1c9a0e8a4f1",
+    "role": "customer"
+},
+"0718781128": {
+    "username": "ted",
+    "password": "6d0077d56768d7ad1893f61ae7ad15014c345a77d3f7091b259546e34cba5526",
+    "role": "customer"
+}
+} 
