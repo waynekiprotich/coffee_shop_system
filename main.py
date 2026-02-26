@@ -2,6 +2,8 @@ from auth import Auth
 from order import Order
 from storage import Storage
 from utils import log_action
+
+
 #menu
 coffee_menu = {
     "1": {"name": "Espresso", "price": 200},
@@ -157,3 +159,6 @@ def main_menu():
 
         else:
             break
+        
+if __name__ == "__main__":
+    main_menu()
