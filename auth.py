@@ -1,6 +1,9 @@
 import json
 import os
 from hashlib import sha256
+import storage
+from utils import validate_phone, validate_password
+
 
 class AuthSystem:
     def __init__(self, db_file='users.json'):
