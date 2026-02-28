@@ -1,16 +1,14 @@
-import json     #Used for working with JSON data (though not directly used here)
-import os        #Operating systems related to functions
-from hashlib import sha256    
-import storage    #Custom module for handling data storage and retrieval
+import hashlib
+from storage import Storage
 from utils import validate_phone, validate_password
 
-      #Authentication class 
+
 class Auth:
 
     def hash_password(self, password):
         return hashlib.sha256(password.encode()).hexdigest()
 
-#register new users
+
     def register(self, username, phone, password, role="customer"):
 
         if not validate_phone(phone):
